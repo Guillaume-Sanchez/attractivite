@@ -1,13 +1,12 @@
 import { 
   Building, 
-  MapPin, 
   ArrowRight,
-  ShieldCheck,
-  Server,
-  Code,
-  Tent,
-  Coffee,
-  Ticket
+  Trophy,
+  Music,
+  TreePine,
+  Factory,
+  Scissors,
+  Wrench
 } from 'lucide-react';
 
 export default function App() {
@@ -60,33 +59,45 @@ export default function App() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-              <div className="w-14 h-14 bg-rose-100 text-rose-500 rounded-xl flex items-center justify-center mb-6">
-                <ShieldCheck size={32} />
+            {/* Carte 1 : Top Industrie */}
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-14 h-14 bg-rose-100 text-rose-500 rounded-xl flex items-center justify-center">
+                  <Factory size={32} />
+                </div>
+                <span className="text-xs font-bold bg-slate-100 text-slate-500 px-3 py-1 rounded-full">Vaux-le-Pénil</span>
               </div>
-              <h3 className="text-xl font-bold mb-3">Cybersécurité</h3>
+              <h3 className="text-xl font-bold mb-3">Top Industrie</h3>
               <p className="text-slate-600">
-                Rejoignez des équipes dédiées à la protection des infrastructures. Audits, pentesting, maîtrise d'outils comme Nessus ou Metasploit pour sécuriser les réseaux industriels.
+                Acteur incontournable de la ZI, cette entreprise est experte dans la fabrication d'équipements de transmission de puissance hydrauliques et pneumatiques. Elle conçoit des solutions sur-mesure pour les environnements de haute pression.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-              <div className="w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6">
-                <Server size={32} />
+            {/* Carte 3 : Sellerie du Lys */}
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-14 h-14 bg-emerald-100 text-emerald-500 rounded-xl flex items-center justify-center">
+                  <Scissors size={32} />
+                </div>
+                <span className="text-xs font-bold bg-slate-100 text-slate-500 px-3 py-1 rounded-full">Le Mée-sur-Seine</span>
               </div>
-              <h3 className="text-xl font-bold mb-3">Infrastructures IT</h3>
+              <h3 className="text-xl font-bold mb-3">Sellerie du Lys</h3>
               <p className="text-slate-600">
-                Devenez l'architecte du SI de demain. Les entreprises locales déploient des environnements virtualisés massifs (Proxmox, Kubernetes) et recherchent des experts pour les maintenir.
+                Présente depuis plus de 30 ans, cette entreprise allie artisanat de précision et industrie technique. Elle est spécialisée dans la confection sur-mesure de bâches, la sellerie automobile, nautique, ainsi que pour les équipements médicaux et aéronautiques.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-              <div className="w-14 h-14 bg-emerald-100 text-emerald-500 rounded-xl flex items-center justify-center mb-6">
-                <Code size={32} />
+            {/* Carte 4 : Sellerie du Lys */}
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-14 h-14 bg-emerald-100 text-emerald-500 rounded-xl flex items-center justify-center">
+                  <Wrench size={32} />
+                </div>
+                <span className="text-xs font-bold bg-slate-100 text-slate-500 px-3 py-1 rounded-full">Vaux-le-Pénil</span>
               </div>
-              <h3 className="text-xl font-bold mb-3">DevOps & Numérique</h3>
+              <h3 className="text-xl font-bold mb-3">Melun Hydraulique</h3>
               <p className="text-slate-600">
-                Développement web, automatisation de pipelines de déploiement et création d'outils internes sur-mesure pour accompagner l'industrie 4.0.
+                PME historique (plus de 50 ans d'existence) experte en hydraulique de puissance et mécatronique. Elle conçoit des solutions sur-mesure pour des secteurs exigeants comme l'énergie, l'industrie lourde et l'aéronautique.
               </p>
             </div>
           </div>
@@ -94,42 +105,61 @@ export default function App() {
       </section>
 
       {/* --- SECTION 2 : LIFESTYLE --- */}
-      <section id="lifestyle" className="py-24 bg-white px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-4">La vraie <span className="text-blue-600">déconnexion</span>.</h2>
-            <p className="text-xl text-slate-500 max-w-2xl">
-              Fini les deux heures de transports par jour et les petits espaces. Ici, on prend le temps de vivre.
-            </p>
-          </div>
+      {/* --- SECTION 2 : LIFESTYLE --- */}
+<section id="lifestyle" className="py-24 bg-white px-4">
+  <div className="max-w-6xl mx-auto">
+    <div className="mb-16">
+      <h2 className="text-4xl md:text-5xl font-black mb-4">La vraie <span className="text-blue-600">déconnexion</span>.</h2>
+      <p className="text-xl text-slate-500 max-w-2xl">
+        Fini les deux heures de transports par jour. L'agglomération melunaise offre un équilibre parfait : une scène culturelle vibrante, un tissu associatif fort et un accès immédiat à des espaces naturels exceptionnels.
+      </p>
+    </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="flex gap-6 items-start">
-              <div className="w-16 h-16 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center shrink-0">
-                <Tent size={32} />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold mb-2">Espace & Logement</h3>
-                <p className="text-slate-600 text-lg">
-                  Profitez d'un marché immobilier accessible. Optez pour une maison avec un vrai jardin, parfait pour vous, votre partenaire de PACS, et pour voir grandir vos animaux (les chats adorent !).
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-6 items-start">
-              <div className="w-16 h-16 bg-rose-50 text-rose-500 rounded-full flex items-center justify-center shrink-0">
-                <Ticket size={32} />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold mb-2">Culture & Sport</h3>
-                <p className="text-slate-600 text-lg">
-                  Un tissu associatif ultra-dynamique. Des salles de concert aux tournois sportifs (on est fiers de nos événements de handball !), il se passe toujours quelque chose le week-end.
-                </p>
-              </div>
-            </div>
+    <div className="grid md:grid-cols-3 gap-8">
+      {/* Activité 1 : Culture & Musique */}
+      <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:-translate-y-1 transition-transform">
+        <div className="flex items-center justify-between mb-6">
+          <div className="w-14 h-14 bg-fuchsia-100 text-fuchsia-600 rounded-xl flex items-center justify-center">
+            <Music size={32} />
           </div>
+          <span className="text-xs font-bold bg-white text-slate-500 px-3 py-1 rounded-full shadow-sm">Savigny-le-Temple</span>
         </div>
-      </section>
+        <h3 className="text-xl font-bold mb-3">L'Empreinte</h3>
+        <p className="text-slate-600">
+          Scène de Musiques Actuelles (SMAC) mythique de l'agglomération. Avec sa programmation éclectique allant du rock indé à l'électro, c're le lieu incontournable pour vos soirées concerts et afterworks le week-end, sans avoir à remonter sur Paris.
+        </p>
+      </div>
+
+      {/* Activité 2 : Sport & Événements */}
+      <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:-translate-y-1 transition-transform">
+        <div className="flex items-center justify-between mb-6">
+          <div className="w-14 h-14 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center">
+            <Trophy size={32} />
+          </div>
+          <span className="text-xs font-bold bg-white text-slate-500 px-3 py-1 rounded-full shadow-sm">Agglomération</span>
+        </div>
+        <h3 className="text-xl font-bold mb-3">Dynamisme Associatif</h3>
+        <p className="text-slate-600">
+          Le territoire vibre au rythme de ses clubs et de ses infrastructures sportives. Rejoignez une communauté soudée et participez à des événements fédérateurs et conviviaux, à l'image des fameuses Olympiades du Baby Hand en juin.
+        </p>
+      </div>
+
+      {/* Activité 3 : Nature & Plein air */}
+      <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:-translate-y-1 transition-transform">
+        <div className="flex items-center justify-between mb-6">
+          <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center">
+            <TreePine size={32} />
+          </div>
+          <span className="text-xs font-bold bg-white text-slate-500 px-3 py-1 rounded-full shadow-sm">Bois-le-Roi</span>
+        </div>
+        <h3 className="text-xl font-bold mb-3">Base de Loisirs & Forêt</h3>
+        <p className="text-slate-600">
+          À quelques minutes du centre de Melun, profitez d'un accès direct à la nature. Un immense terrain de jeu avec des plans d'eau, parfait pour décompresser, pique-niquer, faire du sport ou simplement voir courir vos animaux de compagnie.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* --- FOOTER --- */}
       <footer className="bg-slate-900 text-white py-12 px-4 text-center">
