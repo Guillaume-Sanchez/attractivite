@@ -1,15 +1,9 @@
+version: '3.8'
+
 services:
   webapp:
-    image: ghcr.io/VOTRE_NOM_UTILISATEUR_GITHUB/VOTRE_REPO:latest
+    build: .
     container_name: attractivite-territoire
     restart: unless-stopped
-    # Exposition du port vers votre Reverse Proxy (Nginx Proxy Manager, Traefik, etc.)
     ports:
-      - "8080:80" 
-    # Décommenter si le conteneur doit rejoindre un réseau spécifique pour votre domaine
-    # networks:
-    #   - proxy-network
-
-# networks:
-#   proxy-network:
-#     external: true
+      - "8080:80"
